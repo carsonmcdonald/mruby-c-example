@@ -11,5 +11,5 @@ cd mruby-c-example/mruby
 make
 cd ..
 make
-./mtest
+./simplest
 ```
