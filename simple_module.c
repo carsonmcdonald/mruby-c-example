@@ -7,7 +7,7 @@
 static mrb_value foo_bar(mrb_state* mrb, mrb_value obj)
 {
   mrb_value message;
-  mrb_get_args(mrb, "o", &message);
+  mrb_get_args(mrb, "S", &message);
 
   if (!mrb_nil_p(message))
   {
