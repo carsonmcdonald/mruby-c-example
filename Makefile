@@ -31,7 +31,4 @@ clean_all: clean
 	cd mruby; rake clean
 
 test: $(BINS)
-	./simplest
-	./simple_module
-	./simple_class
-	./class_under_module
+	./run_tests.sh $(BINS)
