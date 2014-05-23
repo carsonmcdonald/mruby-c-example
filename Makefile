@@ -26,6 +26,9 @@ clean:
 	rm -f *.o
 	rm -f $(MRB_HEADERS)
 
+clean_all: clean
+	cd mruby; rake clean
+
 test: $(BINS)
 	./simplest
 	./simple_module
