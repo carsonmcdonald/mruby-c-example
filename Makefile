@@ -1,8 +1,9 @@
 BINS = simplest simple_module simple_class class_under_module
-SRC = simplest.c simple_module.c simple_class.c class_under_module.c
-OBJS = simplest.o simple_module.o simple_class.o class_under_module.o
-MRB_HEADERS = simplest_mrb.h simple_module_mrb.h simple_class_mrb.h class_under_module_mrb.h
-MRB_SAMPLES = simplest_mrb.rb simple_module_mrb.rb simple_class_mrb.rb class_under_module_mrb.rb
+
+SRC := $(BINS:%=%.c)
+OBJS := $(BINS:%=%.o)
+MRB_HEADERS := $(BINS:%=%_mrb.h)
+MRB_SAMPLES := $(BINS:%=%_mrb.rb)
 
 all: $(BINS)
 
