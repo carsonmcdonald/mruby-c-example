@@ -1,4 +1,7 @@
-all: simplest simple_module simple_class class_under_module
+BINS = simplest simple_module simple_class class_under_module
+MRB_HEADERS = simplest_mrb.h simple_module_mrb.h simple_class_mrb.h class_under_module_mrb.h
+
+all: $(BINS)
 
 simplest: simplest.c simplest.rb mruby/build/host/lib/libmruby.a mruby/bin/mrbc
 	mruby/bin/mrbc -B simplest_mrb -o simplest_mrb.h simplest.rb
@@ -27,12 +30,11 @@ mruby/bin/mrbc:
 	cd mruby; rake
 
 clean:
-	rm -f simplest simplest.o simplest_mrb.h
-	rm -f simple_module simple_module.o simple_module_mrb.h
-	rm -f simple_class simple_class.o simple_class_mrb.h
-	rm -f class_under_module class_under_module.o class_under_module_mrb.h
+	rm -f $(BINS)
+	rm -f *.o
+	rm -f $(MRB_HEADERS)
 
-test: simplest simple_module simple_class class_under_module
+test: $(BINS)
 	./simplest
 	./simple_module
 	./simple_class
