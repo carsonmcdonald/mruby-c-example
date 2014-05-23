@@ -23,3 +23,9 @@ clean:
 	rm -f simple_module simple_module.o simple_module_mrb.h
 	rm -f simple_class simple_class.o simple_class_mrb.h
 	rm -f class_under_module class_under_module.o class_under_module_mrb.h
+
+test: simplest simple_module simple_class class_under_module
+	./simplest
+	./simple_module
+	./simple_class
+	./class_under_module
