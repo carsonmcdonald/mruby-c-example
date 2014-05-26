@@ -35,7 +35,7 @@ int main(void)
   mrb_define_method(mrb, foo_class, "initialize", foo_bar_init, MRB_ARGS_REQ(1));
   mrb_define_method(mrb, foo_class, "baz", foo_bar_baz, MRB_ARGS_REQ(1));
 
-  // To get the class you must use: mrb_class_get_under(mrb, foo_module, "Bar");
+  // To get the class use: mrb_class_get_under(mrb, foo_module, "Bar");
 
   mrb_load_irep(mrb, class_under_module_mrb);
 
