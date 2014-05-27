@@ -1,4 +1,4 @@
-BINS = simplest simple_module simple_class class_under_module
+BINS = simplest simple_module simple_class class_under_module simple_yield
 
 SRC := $(BINS:%=%.c)
 OBJS := $(BINS:%=%.o)

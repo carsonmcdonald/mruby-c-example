@@ -18,3 +18,4 @@ Examples
 * *simple_class* - Create a class and use it in a script
 * *simple_module* - Create a module and use it in a script
 * *class_under_module* - Create a class under a module and use it in a script
+* *simple_yield* - Create a method that yields to a given block
