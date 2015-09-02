@@ -30,7 +30,7 @@ int main(void)
   struct RClass *foo_class = mrb_define_class(mrb, "Foo", mrb->object_class);
 
   mrb_define_method(mrb, foo_class, "initialize", foo_init, MRB_ARGS_NONE());
-  mrb_define_method(mrb, foo_class, "bar", foo_bar, ARGS_BLOCK());
+  mrb_define_method(mrb, foo_class, "bar", foo_bar, MRB_ARGS_BLOCK());
 
   mrb_load_irep(mrb, simple_yield_mrb);
 
